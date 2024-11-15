@@ -16,11 +16,20 @@ export default function UserList() {
 
   console.log(listOfUsers);
   return (
-    <div>
+    <div className="flex flex-row gap-20 w-[60%] m-auto h-[100vh] justify-center items-center flex-wrap py-10">
       {listOfUsers.map((user) => (
-        <span class="inline-flex items-center justify-center size-[62px] font-semibold rounded-full leading-none border border-gray-200 bg-white text-gray-800 shadow-sm dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
-          {user.name.split(" ")[0][0] + user.name.split(" ")[1][0]}
-        </span>
+        <div
+          className="flex flex-col border items-center border-gray-500 rounded-md p-2 w-60 h-60"
+          key={user.id}
+        >
+          <span className="inline-flex items-center justify-center size-[62px] font-semibold rounded-full leading-none border border-gray-200 bg-white text-gray-800 shadow-sm dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
+            {user.name.split(" ")[0][0] + user.name.split(" ")[1][0]}
+          </span>
+          <p className="text-center font-bold text-lg my-2">{user.name}</p>
+          <p className='text-nowrap text-sm'>
+            Email: <span className='font-semibold'>{user.email}</span>
+          </p>
+        </div>
       ))}
     </div>
   );
