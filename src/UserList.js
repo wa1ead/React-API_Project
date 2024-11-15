@@ -14,7 +14,7 @@ export default function UserList() {
       .catch((err) => console.error(err.message));
   }, []);
 
-  console.log(listOfUsers);
+  // console.log(listOfUsers);
   return (
     <div className="flex flex-row gap-20 w-[60%] m-auto h-[100vh] justify-center items-center flex-wrap py-10">
       {listOfUsers.map((user) => (
