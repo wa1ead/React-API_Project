@@ -1,5 +1,11 @@
+import UserList from "./UserList";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <UserList />
+    </div>
+  );
 }
 
 export default App;
